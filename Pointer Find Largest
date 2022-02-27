@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define SIZE 8
+int find_largest(int list[],int* end,int* *p);
+int main(void) {
+    int list[]={1,2,3,4,5,6,7,8,};
+    int* p;
+    find_largest(list,list+SIZE-1,&p);
+    printf("%d",*p);
+    return 0;
+}
+int find_largest(int list[],int* end,int* *p){
+    int* largest;
+    int* walker;
+    int* lastPtr;
+    largest=list;
+    walker=list;
+    lastPtr=end;
+    while(walker<=lastPtr){
+        if(*walker > *largest){
+            largest=walker;
+        }
+        walker++;
+    }
+    *p=largest;
+}
