@@ -186,7 +186,7 @@ void deleteData(treePointer * ptr, int key){
 void inorder(treePointer *ptr){
     if(*ptr){
         inorder(&(*ptr)->leftChild);
-        printf("%d\n",(*ptr)->data);
+        printf("%d ",(*ptr)->data);
         inorder(&(*ptr)->rightChild);
     }
 }
