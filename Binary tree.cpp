@@ -14,18 +14,22 @@ int main(void){
     treePointer root=NULL;
     int a;
     char b;
-    printf("Enter 's 0' if you want to print Tree\n");
-    scanf("%c %d",&b,&a);
+    printf("Enter 's' if you want to print Tree:");
+    scanf("%c",&b);
     while(b!='s'){
+        scanf("%d",&a);
         if(b=='i'){
             insert(&root,a);
+            printf("Enter 's' if you want to print Tree:");
         }else if(b=='d'){
             deleteData(&root,a);
+            printf("Enter 's' if you want to print Tree:");
         }
-        scanf("%c %d",&b,&a);
+        scanf("%c",&b);
     }
     inorder(&root);
 
+    return 0;
 }
 
 treePointer modifiedSearch(treePointer tree, int key){
