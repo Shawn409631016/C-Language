@@ -61,13 +61,13 @@ void createBinaryTree(treePointer *ptr){
 void inorder(treePointer *ptr){
     if(*ptr){
         inorder(&(*ptr)->leftChild);
-        printf("%d\n",(*ptr)->data);
+        printf("%d ",(*ptr)->data);
         inorder(&(*ptr)->rightChild);
     }
 }
 void preorder(treePointer *ptr){
     if(*ptr){
-        printf("%d\n",(*ptr)->data);
+        printf("%d ",(*ptr)->data);
         preorder(&(*ptr)->leftChild);
         preorder(&(*ptr)->rightChild);
     }
@@ -76,7 +76,7 @@ void postorder(treePointer *ptr){
     if(*ptr){
         postorder(&(*ptr)->leftChild);
         postorder(&(*ptr)->rightChild);
-        printf("%d\n",(*ptr)->data);
+        printf("%d ",(*ptr)->data);
     }
 }
 void addq(treePointer *ptr){
