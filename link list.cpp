@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-//¥Î©óÀH·N§R 
+//Â¥ÃŽÂ©Ã³Ã€HÂ·NÂ§R 
 typedef struct list_node * list_pointer;
 struct list_node{
     int data;
-    list_pointer* next;
+    list_pointer next;
 };
 void insert(list_pointer * p, int num);
 void delete_data(list_pointer * p, int num);
